@@ -21,8 +21,8 @@ var characters = [
   },
 
   {
-    first_name: "Victor",
-    last_name: "Plum",
+    firstName: "Victor",
+    lastName: "Plum",
     color: "purple",
     description: "Billionare video game designer",
     age: 22,
@@ -31,8 +31,8 @@ var characters = [
   },
 
   {
-    first_name: "Kasandra",
-    last_name: "Scarlet",
+    firstName: "Kasandra",
+    lastName: "Scarlet",
     color: "red",
     description: "She is an A-list movie star with a dark past",
     age: 31,
@@ -41,8 +41,8 @@ var characters = [
   },
 
   {
-    first_name: "Eleanor",
-    last_name: "Peacock",
+    firstName: "Eleanor",
+    lastName: "Peacock",
     color: "blue",
     description:
       "She is from a wealthy family and uses her status and money to earn popularity",
@@ -52,8 +52,8 @@ var characters = [
   },
 
   {
-    first_name: "Jack",
-    last_name: "Mustard",
+    firstName: "Jack",
+    lastName: "Mustard",
     color: "yellow",
     description:
       "He is a former football player who tries to get by on his former glory",
@@ -108,10 +108,6 @@ function randomSelector(cardsArray) {
   return cardsArray[Math.floor(Math.random() * cardsArray.length)];
 }
 
-//console.log(randomSelector(charactersArray));
-//console.log(randomSelector(roomsArray));
-//console.log(randomSelector(weaponsArray));
-
 function pickMistery() {
   var misteryEnvelope = [];
   fullStack = [charactersArray, weaponsArray, roomsArray];
@@ -120,27 +116,6 @@ function pickMistery() {
   });
   return misteryEnvelope;
 }
-
-// function pickMistery(cardsArray1, cardsArray2, cardsArray3) {
-//   var misteryEnvelope = [];
-//   fullStack = [cardsArray1, cardsArray2, cardsArray3];
-//   fullStack.forEach(function(oneStack) {
-//     misteryEnvelope.push(randomSelector(oneStack));
-//   });
-//   return misteryEnvelope;
-// }
-
-// var misteryEnvelope = pickMistery();
-
-// function pickMistery() {
-//   var misteryEnvelope = [];
-
-//   misteryEnvelope.push(randomSelector(charactersArray));
-//   misteryEnvelope.push(randomSelector(weaponsArray));
-//   misteryEnvelope.push(randomSelector(roomsArray));
-
-//   return misteryEnvelope;
-// }
 
 var misteryEnvelope = pickMistery();
 
@@ -153,8 +128,7 @@ function revealMistery() {
     misteryEnvelope[1].name +
     " in the " +
     misteryEnvelope[2].name +
-    " !!!!"
+    "!!!!"
   );
 }
-
 // revealMistery();
